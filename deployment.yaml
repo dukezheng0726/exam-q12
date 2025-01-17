@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: q11
+  labels:
+    app: q11
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: q11
+  template:
+    metadata:
+      labels:
+        app: q11
+    spec:
+      containers:
+      - name: q11
+        image: dukezheng0726/finalexam:latest
+        ports:
+        - containerPort: 8080
